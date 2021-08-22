@@ -1,0 +1,37 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct Color
+{
+    float4 color;
+};
+RWStructuredBuffer<Color> input;
+
+Buffer<float4> ColorToCompare;
+float Prescision;
+int numOfXThreads;
+int numOfYThreads;
+
+[numthreads(32,32,1)]
+void CSMain(uint3 idGroup : SV_GroupID, uint idInGroup : SV_GroupIndex)
+{
+    int currentPixel = idInGroup + (idGroup.x + idGroup.y * numOfXThreads + idGroup.z * numOfXThreads * numOfYThreads) * 32 * 32 * 1;
+    float4 pixel = input[currentPixel].color;
+
+    float4 topBorder = ColorToCompare.Load(0);
+    topBorder.r = saturate(topBorder.r + Prescision);
+    topBorder.g = saturate(topBorder.g + Prescision);
+    topBorder.b = saturate(topBorder.b + Prescision);
+
+    float4 bottomBorder = ColorToCompare.Load(0) - Prescision;
+    bottomBorder.r = saturate(bottomBorder.r - Prescision);
+    bottomBorder.g = saturate(bottomBorder.g - Prescision);
+    bottomBorder.b = saturate(bottomBorder.b - Prescision);
+
+    if (all(pixel.rgb >= bottomBorder.rgb) && all(pixel.rgb <= topBorder.rgb))
+    {
+        input[currentPixel].color = float4(0, 0, 0, 0);
+    }
+}

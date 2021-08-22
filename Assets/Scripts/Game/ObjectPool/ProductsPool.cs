@@ -1,0 +1,1 @@
+public class ProductsPool : GameObjectPool<Product> {}

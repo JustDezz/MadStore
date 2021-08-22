@@ -1,0 +1,1 @@
+public class ShelvingsPool : GameObjectPool<UnityEngine.Transform> { }

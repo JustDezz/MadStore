@@ -1,0 +1,1 @@
+public class IncomeLabelPool : GameObjectPool<UnityEngine.UI.Text> {}

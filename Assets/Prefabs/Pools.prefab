@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8256855254780242668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8256855254780242656}
+  - component: {fileID: 8256855254780242657}
+  - component: {fileID: 8256855254780242670}
+  - component: {fileID: 8256855254780242671}
+  m_Layer: 0
+  m_Name: Pools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8256855254780242656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256855254780242668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 280.25354, y: 604.97363, z: -0.9317627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8256855254780242657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256855254780242668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e47e18f7f2e5094ebff8d8e4c06b7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 7930738555135336308, guid: 351ed5e8356c58540941bc5f73812ffa, type: 3}
+  - {fileID: 3042336754291914812, guid: c82032b5e54ce684691cba03f11f1db7, type: 3}
+  - {fileID: 657371517175113986, guid: 869941c3081149a4f84bca464262ff53, type: 3}
+  - {fileID: 932937214660687240, guid: 31f59401eb53814499c1397466eb714f, type: 3}
+  - {fileID: 7703685870905426333, guid: 0fa4bd64dc0947943abde31a64a1b8a5, type: 3}
+  - {fileID: 2878220179622374228, guid: 75b5d6781f150124fa8e71173b50e9ad, type: 3}
+  - {fileID: 2878220179622374228, guid: bd805e2aed3ef6e488acee23c0f8d6c3, type: 3}
+  - {fileID: 2878220179622374228, guid: 715c62cdbb096e144a2ed174cfab8e7a, type: 3}
+  - {fileID: 3042336754291914812, guid: 473f4e10635fc0e4c9ffd2a41a40c7de, type: 3}
+  - {fileID: 4000615439617017416, guid: fdbc9c96f554fc444bff64cdba267312, type: 3}
+  - {fileID: 7244624041667501042, guid: 80ab440cdc127554ba99b0738bbf4837, type: 3}
+  poolName: ProductsPool
+--- !u!114 &8256855254780242670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256855254780242668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22aa2da8a410a4e4387cba4ee70936ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 6622778195167617620, guid: de0e773ef85df194aa14eccbdf4a2a54, type: 3}
+  poolName: ShelvingsPool
+--- !u!114 &8256855254780242671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256855254780242668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18d9f44dc9501d45a33abff3b9d0380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefabs:
+  - {fileID: 5166897254117986574, guid: d3ab66bf805b2564f98e7b543a38ced0, type: 3}
+  poolName: IncomeLabelPool
