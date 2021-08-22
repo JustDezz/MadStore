@@ -6,18 +6,21 @@ using UnityEngine.Advertisements;
 public class AdManager : MonoBehaviour, IUnityAdsListener
 {
 #if UNITY_ANDROID
-	private string GoogleID = "4240411";
+	private string appID = "4240411";
 	private string rewardedPlacementID = "Rewarded_Android";
 #elif UNITY_IOS
-	private string GoogleID = "4240410";
+	private string appID = "4240410";
 	private string rewardedPlacementID = "Rewarded_iOS";
+#else 
+	private string appID = "";
+	private string rewardedPlacementID = "";
 #endif
 	private Action OnRewardedVideoSucceed;
 	private bool videoReTried = false;
 
 	private IEnumerator Start()
 	{
-		Advertisement.Initialize(GoogleID);
+		Advertisement.Initialize(appID);
 		Advertisement.AddListener(this);
 		yield return null;
 	}
