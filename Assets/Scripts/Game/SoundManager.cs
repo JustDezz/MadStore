@@ -163,7 +163,7 @@ public class SoundManager : MonoBehaviour
     }
     public void StopSound(string soundName)
     {
-        sounds[soundName].Stop();
+        sounds[soundName]?.Stop();
     }
     public void MuteEffects(bool isMuted)
     {
