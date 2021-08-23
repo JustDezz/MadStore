@@ -18,12 +18,14 @@ public class AdManager : MonoBehaviour, IUnityAdsListener
 	private Action OnRewardedVideoSucceed;
 	private bool videoReTried = false;
 
+#if UNITY_ANDROID || UNITY_IOS
 	private IEnumerator Start()
 	{
 		Advertisement.Initialize(appID);
 		Advertisement.AddListener(this);
 		yield return null;
 	}
+#endif
 	public void ShowRewardedAd(Action onAdSucceed)
 	{
 		OnRewardedVideoSucceed = onAdSucceed;
